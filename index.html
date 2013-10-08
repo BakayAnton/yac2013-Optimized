@@ -6,6 +6,19 @@
     <meta name="viewport" content="width=792, user-scalable=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="stylesheet" href="shower/themes/bright/styles/screen.css">
+
+    <style type="text/css">
+        .slide > div {
+            width:  904px;
+            padding: 80px 50px 0 70px;
+        }
+        .slide .table-stats {width: 100%;}
+        .slide .table-stats td,
+        .slide .table-stats th {
+            text-align: center;
+        }
+        .highlighted {background: #ccc;}
+    </style>
 </head>
 <body class="list">
     <header class="caption">
@@ -14,7 +27,6 @@
     </header>
     <section class="slide cover" id="Cover"><div>
         <h2>Browser Performance</h2>
-        <p>Brought to you by <a href="http://pepelsbey.net">Vadim Makeev</a></p>
         <img src="pictures/cover.jpg" alt="">
         <!--
             To apply styles to the certain slides
@@ -52,16 +64,31 @@
 
     <section class="slide"><div>
         <h2><a href="http://bakayanton.github.io/yac2013-NotOptimizedPage/" target="_blank">Неоптимизированная страница</a></h2>
-        <ul>
-            <li><b>Start Render: </b>5.350s</li>
-            <li><b>Load Time: </b>22.971s</li>
-            <li><b>DOM Elements: </b>102</li>
-            <li><b>Requests: </b>36</li>
-            <li><b>Loaded Bytes: </b>3,529 KB</li>
-        </ul>
+        <table class="table-stats">
+            <tr>
+                <th>Start Render</th>   <th>Load Time</th>  <th>DOM Elements</th>   <th>Requests</th>   <th>Loaded Bytes</th>
+            </tr><tr class="highlighted">
+                <td>5.350s</td>         <td>22.971s</td>    <td>102</td>            <td>35</td>         <td>3,529 KB</td>
+            </tr>
+        </table>
     </div></section>
+
     <section class="slide"><div>
         <iframe src="http://www.webpagetest.org/video/view.php?id=131007_6807106dc202119a09bf89c76b3a143a722d031a&embed=1&width=528&height=416" width="528" height="416"></iframe>
+    </div></section>
+
+    <section class="slide"><div>
+        <h2><a href="http://bakayanton.github.io/yac2013-Optimized/optimization-1" target="_blank">Optimization-1</a></h2>
+        <i>(Styles to top. Scripts to bottom)</i>
+        <table class="table-stats">
+            <tr>
+                <th>Start Render</th>   <th>Load Time</th>  <th>DOM Elements</th>   <th>Requests</th>   <th>Loaded Bytes</th>
+            </tr><tr>
+                <td>5.350s</td>         <td>22.971s</td>    <td>102</td>            <td>35</td>         <td>3,529 KB</td>
+            </tr><tr class="highlighted">
+                <td>2.468s</td>         <td>20.203s</td>    <td>102</td>            <td>35</td>         <td>3,529 KB</td>
+            </tr>
+        </table>
     </div></section>
 
     <section class="slide table"><div>
@@ -89,6 +116,94 @@
         </table>
                     
     </div></section>
+
+    <section class="slide table"><div>
+            <table align="center">
+                <tbody>
+                <tr>
+                    <td>
+                        <div id="pieRequestsFv_div" style="width: 450px; height: 300px; position: relative;"><div dir="ltr" style="position: relative; width: 450px; height: 300px;"><div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;"><svg width="450" height="300" style="overflow: hidden;"><defs id="defs"></defs><rect x="0" y="0" width="450" height="300" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><text text-anchor="start" x="86" y="38.35" font-family="Arial" font-size="11" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">Requests</text></g><g><rect x="276" y="58" width="88" height="83" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><rect x="276" y="58" width="88" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="291" y="67.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">css</text></g><rect x="276" y="58" width="11" height="11" stroke="none" stroke-width="0" fill="#b2ea94"></rect></g><g><rect x="276" y="76" width="88" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="291" y="85.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">html</text></g><rect x="276" y="76" width="11" height="11" stroke="none" stroke-width="0" fill="#82b5fc"></rect></g><g><rect x="276" y="94" width="88" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="291" y="103.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">image</text></g><rect x="276" y="94" width="11" height="11" stroke="none" stroke-width="0" fill="#c49ae8"></rect></g><g><rect x="276" y="112" width="88" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="291" y="121.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">js</text></g><rect x="276" y="112" width="11" height="11" stroke="none" stroke-width="0" fill="#fec584"></rect></g><g><rect x="276" y="130" width="88" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="291" y="139.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">other</text></g><rect x="276" y="130" width="11" height="11" stroke="none" stroke-width="0" fill="#c4c4c4"></rect></g></g><g><path d="M172,151L172,65A86,86,0,0,1,229.93782535360393,87.4452331190233L172,151A0,0,0,0,0,172,151" stroke="#ffffff" stroke-width="1" fill="#b2ea94"></path><text text-anchor="start" x="179.3408808742044" y="95.89089006362198" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#ffffff">11.8%</text></g><g><path d="M172,151L229.93782535360393,87.4452331190233A86,86,0,0,1,240.6294815461006,99.17342127138396L172,151A0,0,0,0,0,172,151" stroke="#ffffff" stroke-width="1" fill="#82b5fc"></path></g><g><path d="M172,151L240.6294815461006,99.17342127138396A86,86,0,0,1,187.80245853222505,235.53568657281556L172,151A0,0,0,0,0,172,151" stroke="#ffffff" stroke-width="1" fill="#c49ae8"></path><text text-anchor="start" x="211.10405805001704" y="176.00372478509976" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#ffffff">32.4%</text></g><g><path d="M172,151L114.06217464639603,87.44523311902336A86,86,0,0,1,172,65L172,151A0,0,0,0,0,172,151" stroke="#ffffff" stroke-width="1" fill="#c4c4c4"></path><text text-anchor="start" x="133.6591191257955" y="95.89089006362202" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#ffffff">11.8%</text></g><g><path d="M172,151L187.80245853222505,235.53568657281556A86,86,0,0,1,114.06217464639603,87.44523311902336L172,151A0,0,0,0,0,172,151" stroke="#ffffff" stroke-width="1" fill="#fec584"></path><text text-anchor="start" x="104.00125032506328" y="180.99127119199375" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#ffffff">41.2%</text></g><g></g></svg></div></div><div style="display: none; position: absolute; top: 310px; left: 460px; white-space: nowrap; font-family: Arial; font-size: 11px; font-weight: bold;">1 (2.9%)</div><div></div></div>
+                    </td>
+                    <td>
+                        <div id="pieBytesFv_div" style="width: 450px; height: 300px; position: relative;"><div dir="ltr" style="position: relative; width: 450px; height: 300px;"><div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;"><svg width="450" height="300" style="overflow: hidden;"><defs id="defs"></defs><rect x="0" y="0" width="450" height="300" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><text text-anchor="start" x="86" y="38.35" font-family="Arial" font-size="11" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">Bytes</text></g><g><rect x="276" y="58" width="88" height="83" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><rect x="276" y="58" width="88" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="291" y="67.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">css</text></g><rect x="276" y="58" width="11" height="11" stroke="none" stroke-width="0" fill="#b2ea94"></rect></g><g><rect x="276" y="76" width="88" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="291" y="85.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">image</text></g><rect x="276" y="76" width="11" height="11" stroke="none" stroke-width="0" fill="#c49ae8"></rect></g><g><rect x="276" y="94" width="88" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="291" y="103.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">js</text></g><rect x="276" y="94" width="11" height="11" stroke="none" stroke-width="0" fill="#fec584"></rect></g><g><rect x="276" y="112" width="88" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="291" y="121.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">other</text></g><rect x="276" y="112" width="11" height="11" stroke="none" stroke-width="0" fill="#c4c4c4"></rect></g><g><rect x="276" y="130" width="88" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="291" y="139.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">Other</text></g><rect x="276" y="130" width="11" height="11" stroke="none" stroke-width="0" fill="#cccccc"></rect></g></g><g><path d="M172,151L172,65A86,86,0,0,1,177.28236270121863,65.16238211429226L172,151A0,0,0,0,0,172,151" stroke="#ffffff" stroke-width="1" fill="#b2ea94"></path></g><g><path d="M172,151L171.25017944185248,65.0032688462487A86,86,0,0,1,172,65L172,151A0,0,0,0,0,172,151" stroke="#ffffff" stroke-width="1" fill="#cccccc"></path></g><g><path d="M172,151L86.33215841789254,158.55121968048476A86,86,0,0,1,171.25017944185257,65.0032688462487L172,151A0,0,0,0,0,172,151" stroke="#ffffff" stroke-width="1" fill="#c4c4c4"></path><text text-anchor="start" x="112.40147080210545" y="114.81962203706505" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#ffffff">26.3%</text></g><g><path d="M172,151L89.4292272863515,175.04303419851584A86,86,0,0,1,86.33215841789254,158.55121968048476L172,151A0,0,0,0,0,172,151" stroke="#ffffff" stroke-width="1" fill="#fec584"></path></g><g><path d="M172,151L177.28236270121863,65.16238211429226A86,86,0,1,1,89.4292272863515,175.04303419851584L172,151A0,0,0,1,0,172,151" stroke="#ffffff" stroke-width="1" fill="#c49ae8"></path><text text-anchor="start" x="202.78929969259164" y="191.85979232481728" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#ffffff">69.5%</text></g><g></g></svg></div></div><div style="display: none; position: absolute; top: 310px; left: 460px; white-space: nowrap; font-family: Arial; font-size: 11px; font-weight: bold;">2393441 (69.5%)</div><div></div></div>
+                    </td>
+                </tr>
+
+            </tbody></table>
+                    
+    </div></section>
+
+    <section id="slide-icons-table" class="slide"><div>
+        <style type="text/css">
+            #slide-icons-table > div {width:100%; padding:5px 0; overflow: auto;}
+        </style>
+        <h2><a href="http://bakayanton.github.io/yac2013-Optimized/optimization-2" target="_blank">Optimization-2</a> (Reduce images size)</h2>
+        <table>
+            <tr>
+                <th>Image</th>
+                <th>Size (KB)</th>
+                <th>Size Opt (KB)</th>
+            </tr>
+            <tr>
+                <td>favicon.ico</td>        <td>80,7</td>   <td>1,12</td>   </tr><tr>
+                <td>iphone_favicon.png</td> <td>3,41</td>   <td>2,96</td>   </tr><tr>
+                
+                <td>ico-agenda.png</td>     <td>9,08</td>   <td>0,5</td>    </tr><tr>
+                <td>ico-crown.png</td>      <td>9,08</td>   <td>0,5</td>    </tr><tr>
+                <td>ico-helicopter.png</td> <td>9,08</td>   <td>0,5</td>    </tr><tr>
+                <td>ico-main.png</td>       <td>9,08</td>   <td>0,4</td>    </tr><tr>
+                <td>ico-main-w.png</td>     <td>9,08</td>   <td>0,37</td>   </tr><tr>
+                <td>ico-new.png</td>        <td>9,08</td>   <td>0,4</td>    </tr><tr>
+                <td>ico-pay.png</td>        <td>9,08</td>   <td>0,47</td>   </tr><tr>
+
+                <td>photo_01.jpg</td>       <td>60,9</td>   <td>15,7</td>   </tr><tr>
+                <td>photo_02.jpg</td>       <td>1766,1</td> <td>15,1</td>   </tr><tr>
+                <td>photo_01.jpg</td>       <td>455</td>    <td>25,6</td>   </tr><tr>
+                <td>banner.png</td>         <td>28,0</td>   <td>14,4</td>   </tr><tr>
+                <th>Total</th>              <th>2457,67</th><th>78,02</th>  </tr>
+            </tr>
+        </table>
+    </div></section>
+
+    <section class="slide table"><div>
+                    
+    </div></section>
+
+    <section class="slide table"><div>
+                    
+    </div></section>
+
+    <section class="slide table"><div>
+                    
+    </div></section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <section class="slide"><div>
         <h2>Serious Citations</h2>
