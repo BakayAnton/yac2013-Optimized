@@ -21,10 +21,10 @@ body {
 }
 .nav-list a:before {content:""; display:inline-block; width: 20px; height: 20px; margin-right: 1ex; margin-top: -6px; background: url(../img/sprite.png) 0 0 no-repeat; vertical-align: middle;}
 
-#main.active a:before {background-position: -21px 0;}
-#news a:before {margin-top: -4px; background-position: -42px 0;}
-#agenda a:before {background-position: -63px 0;}
-#sponsors a:before {background-position: -84px 0;}
-#pay a:before {margin-top: -5px; background-position: -105px 0;}
-#contacts a:before {background-position: -126px 0;}
+#main.active a:before {}
+#news a:before {margin-top: -4px; background-position: -21px 0;}
+#agenda a:before {background-position: -42px 0;}
+#sponsors a:before {background-position: -63px 0;}
+#pay a:before {margin-top: -5px; background-position: -84px 0;}
+#contacts a:before {background-position: -105px 0;}
 
