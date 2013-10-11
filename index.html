@@ -280,7 +280,7 @@
         </div>
     </div></section>
 
-        <section class="slide lotofcode "><div>
+    <section class="slide lotofcode "><div>
         <style type="text/css">
             .lotofcode > div {height: 640px; padding-top: 0;}
         </style>
@@ -325,6 +325,25 @@
             <code>&lt;<mark>li</mark> id="<mark class="string">main</mark>" class="<mark class="string">active</mark>"&gt;</code>
             <code>&lt;<mark>img</mark> src="<mark class="string">assets/img/ico-main-w.png</mark>"&gt;</code>
         </pre>
+    </div></section>
+
+    <!--  Optimization-3 -->
+    <section class="slide"><div>
+        <h2><a href="http://bakayanton.github.io/yac2013-Optimized/optimization-3" target="_blank">Optimization-3</a> <i>(Reduce js requests. Remove useless js)</i></h2>
+        
+        <table class="table-stats">
+            <tr>
+                <th>Start Render</th>   <th>Load Time</th>  <th>DOM Elements</th>   <th>Requests</th>   <th>Loaded Bytes</th>
+            </tr><tr>
+                <td>5.350s</td>         <td>22.971s</td>    <td>102</td>            <td>35</td>         <td>3,529 KB</td>
+            </tr><tr>
+                <td>2.468s</td>         <td>20.203s</td>    <td>102</td>            <td>35</td>         <td>3,529 KB</td>
+            </tr><tr>
+                <td>2.455s</td>         <td>8.214s</td>     <td>102</td>            <td>35</td>         <td>1.268 KB</td>
+            </tr><tr class="highlighted">
+                <td>2.270s</td>         <td>7.597s</td>     <td>88</td>             <td>21</td>         <td>1.263 KB</td>
+            </tr>
+        </table>
     </div></section>
 
     <section class="slide"><div>
