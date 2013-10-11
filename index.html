@@ -8,16 +8,24 @@
     <link rel="stylesheet" href="shower/themes/bright/styles/screen.css">
 
     <style type="text/css">
+        .slide {}
         .slide > div {
             width:  904px;
             padding: 80px 50px 0 70px;
         }
+        .slide h2 {margin-bottom: 30px;}
+        .slide h2 i {font-size: 24px;}
         .slide .table-stats {width: 100%;}
         .slide .table-stats td,
         .slide .table-stats th {
             text-align: center;
         }
         .highlighted {background: #ccc;}
+
+        .slide mark.string {color:#CE8740;}
+        .slide mark.deleted {opacity: 0.1;}
+
+        pre {border:1px solid #52A2DF; background:rgba(255,255,255,0.9);}
     </style>
 </head>
 <body class="list">
@@ -25,6 +33,8 @@
         <h1>Browser Performance</h1>
         <p>Bakay Anton, Astound Commerce</p>
     </header>
+
+    <!-- 1 -->
     <section class="slide cover" id="Cover"><div>
         <h2>Browser Performance</h2>
         <img src="pictures/cover.jpg" alt="">
@@ -52,6 +62,7 @@
         </style>
     </div></section>
 
+    <!-- 2 -->
     <section class="slide"><div>
         <h2>Настройка тестов</h2>
         <ul>
@@ -62,6 +73,7 @@
         </ul>
     </div></section>
 
+    <!-- 3 -->
     <section class="slide"><div>
         <h2><a href="http://bakayanton.github.io/yac2013-NotOptimizedPage/" target="_blank">Неоптимизированная страница</a></h2>
         <table class="table-stats">
@@ -73,13 +85,15 @@
         </table>
     </div></section>
 
+    <!-- 4 -->
     <section class="slide"><div>
         <iframe src="http://www.webpagetest.org/video/view.php?id=131007_6807106dc202119a09bf89c76b3a143a722d031a&embed=1&width=528&height=416" width="528" height="416"></iframe>
     </div></section>
 
+    <!-- 5 Optimization-1 -->
     <section class="slide"><div>
-        <h2><a href="http://bakayanton.github.io/yac2013-Optimized/optimization-1" target="_blank">Optimization-1</a></h2>
-        <i>(Styles to top. Scripts to bottom)</i>
+        <h2><a href="http://bakayanton.github.io/yac2013-Optimized/optimization-1" target="_blank">Optimization-1</a> <i>(Styles to top. Scripts to bottom)</i></h2>
+        
         <table class="table-stats">
             <tr>
                 <th>Start Render</th>   <th>Load Time</th>  <th>DOM Elements</th>   <th>Requests</th>   <th>Loaded Bytes</th>
@@ -91,6 +105,7 @@
         </table>
     </div></section>
 
+    <!-- 6 -->
     <section class="slide table"><div>
         <style type="text/css">
             .table table {table-layout: fixed;}
@@ -99,7 +114,7 @@
         </style>
         <table>
             <tr>
-                <th >Scripts <br> CSS</th>
+                <th style="height:164px;" >Scripts <br> CSS</th>
                 <td rowspan="2">
                     <div style="overflow:auto; width:100%;">
                         <img src="pictures/filmstrip_slow.png" style="display:block;">
@@ -113,10 +128,10 @@
                 </th>
              
             </tr>
-        </table>
-                    
+        </table>        
     </div></section>
 
+    <!-- 7 -->
     <section class="slide table"><div>
             <table align="center">
                 <tbody>
@@ -130,14 +145,13 @@
                 </tr>
 
             </tbody></table>
-                    
     </div></section>
 
+    <!-- 8 -->
     <section id="slide-icons-table" class="slide"><div>
         <style type="text/css">
             #slide-icons-table > div {width:100%; padding:5px 0; overflow: auto;}
         </style>
-        <h2><a href="http://bakayanton.github.io/yac2013-Optimized/optimization-2" target="_blank">Optimization-2</a> (Reduce images size)</h2>
         <table>
             <tr>
                 <th>Image</th>
@@ -165,16 +179,161 @@
         </table>
     </div></section>
 
-    <section class="slide table"><div>
-                    
+    <!-- 9 Optimization-2 -->
+    <section class="slide"><div>
+        <h2><a href="http://bakayanton.github.io/yac2013-Optimized/optimization-2" target="_blank">Optimization-2</a> <i>(Reduce images size)</i></h2>
+        
+        <table class="table-stats">
+            <tr>
+                <th>Start Render</th>   <th>Load Time</th>  <th>DOM Elements</th>   <th>Requests</th>   <th>Loaded Bytes</th>
+            </tr><tr>
+                <td>5.350s</td>         <td>22.971s</td>    <td>102</td>            <td>35</td>         <td>3,529 KB</td>
+            </tr><tr>
+                <td>2.468s</td>         <td>20.203s</td>    <td>102</td>            <td>35</td>         <td>3,529 KB</td>
+            </tr><tr class="highlighted">
+                <td>2.455s</td>         <td>8.214s</td>     <td>102</td>            <td>35</td>         <td>1.268 KB</td>
+            </tr>
+        </table>
     </div></section>
 
+    <!-- 10 Optimization-2 PIES-->
     <section class="slide table"><div>
-                    
+            <table align="center">
+                <tbody>
+                <tr>
+                    <td>
+                        <div id="pieRequestsFv_div" style="width: 450px; height: 300px; position: relative;"><div dir="ltr" style="position: relative; width: 450px; height: 300px;"><div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;"><svg width="450" height="300" style="overflow: hidden;"><defs id="defs"></defs><rect x="0" y="0" width="450" height="300" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><text text-anchor="start" x="86" y="38.35" font-family="Arial" font-size="11" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">Requests</text></g><g><rect x="276" y="58" width="88" height="83" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><rect x="276" y="58" width="88" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="291" y="67.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">css</text></g><rect x="276" y="58" width="11" height="11" stroke="none" stroke-width="0" fill="#b2ea94"></rect></g><g><rect x="276" y="76" width="88" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="291" y="85.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">html</text></g><rect x="276" y="76" width="11" height="11" stroke="none" stroke-width="0" fill="#82b5fc"></rect></g><g><rect x="276" y="94" width="88" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="291" y="103.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">image</text></g><rect x="276" y="94" width="11" height="11" stroke="none" stroke-width="0" fill="#c49ae8"></rect></g><g><rect x="276" y="112" width="88" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="291" y="121.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">js</text></g><rect x="276" y="112" width="11" height="11" stroke="none" stroke-width="0" fill="#fec584"></rect></g><g><rect x="276" y="130" width="88" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="291" y="139.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">other</text></g><rect x="276" y="130" width="11" height="11" stroke="none" stroke-width="0" fill="#c4c4c4"></rect></g></g><g><path d="M172,151L172,65A86,86,0,0,1,229.93782535360393,87.4452331190233L172,151A0,0,0,0,0,172,151" stroke="#ffffff" stroke-width="1" fill="#b2ea94"></path><text text-anchor="start" x="179.3408808742044" y="95.89089006362198" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#ffffff">11.8%</text></g><g><path d="M172,151L229.93782535360393,87.4452331190233A86,86,0,0,1,240.6294815461006,99.17342127138396L172,151A0,0,0,0,0,172,151" stroke="#ffffff" stroke-width="1" fill="#82b5fc"></path></g><g><path d="M172,151L240.6294815461006,99.17342127138396A86,86,0,0,1,187.80245853222505,235.53568657281556L172,151A0,0,0,0,0,172,151" stroke="#ffffff" stroke-width="1" fill="#c49ae8"></path><text text-anchor="start" x="211.10405805001704" y="176.00372478509976" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#ffffff">32.4%</text></g><g><path d="M172,151L114.06217464639603,87.44523311902336A86,86,0,0,1,172,65L172,151A0,0,0,0,0,172,151" stroke="#ffffff" stroke-width="1" fill="#c4c4c4"></path><text text-anchor="start" x="133.6591191257955" y="95.89089006362202" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#ffffff">11.8%</text></g><g><path d="M172,151L187.80245853222505,235.53568657281556A86,86,0,0,1,114.06217464639603,87.44523311902336L172,151A0,0,0,0,0,172,151" stroke="#ffffff" stroke-width="1" fill="#fec584"></path><text text-anchor="start" x="104.00125032506328" y="180.99127119199375" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#ffffff">41.2%</text></g><g></g></svg></div></div><div style="display: none; position: absolute; top: 310px; left: 460px; white-space: nowrap; font-family: Arial; font-size: 11px;">other</div><div></div></div>
+                    </td>
+                    <td>
+                        <div id="pieBytesFv_div" style="width: 450px; height: 300px; position: relative;"><div dir="ltr" style="position: relative; width: 450px; height: 300px;"><div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;"><svg width="450" height="300" style="overflow: hidden;"><defs id="defs"></defs><rect x="0" y="0" width="450" height="300" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><text text-anchor="start" x="86" y="38.35" font-family="Arial" font-size="11" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">Bytes</text></g><g><rect x="276" y="58" width="88" height="83" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><rect x="276" y="58" width="88" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="291" y="67.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">css</text></g><rect x="276" y="58" width="11" height="11" stroke="none" stroke-width="0" fill="#b2ea94"></rect></g><g><rect x="276" y="76" width="88" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="291" y="85.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">html</text></g><rect x="276" y="76" width="11" height="11" stroke="none" stroke-width="0" fill="#82b5fc"></rect></g><g><rect x="276" y="94" width="88" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="291" y="103.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">image</text></g><rect x="276" y="94" width="11" height="11" stroke="none" stroke-width="0" fill="#c49ae8"></rect></g><g><rect x="276" y="112" width="88" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="291" y="121.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">js</text></g><rect x="276" y="112" width="11" height="11" stroke="none" stroke-width="0" fill="#fec584"></rect></g><g><rect x="276" y="130" width="88" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="291" y="139.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">other</text></g><rect x="276" y="130" width="11" height="11" stroke="none" stroke-width="0" fill="#c4c4c4"></rect></g></g><g><path d="M172,151L172,65A86,86,0,0,1,188.0308129874222,66.50731963677389L172,151A0,0,0,0,0,172,151" stroke="#ffffff" stroke-width="1" fill="#b2ea94"></path></g><g><path d="M172,151L188.0308129874222,66.50731963677389A86,86,0,0,1,190.27270629992682,66.96364950524912L172,151A0,0,0,0,0,172,151" stroke="#ffffff" stroke-width="1" fill="#82b5fc"></path></g><g><path d="M172,151L190.27270629992682,66.96364950524912A86,86,0,0,1,224.35164748498977,82.77020441473269L172,151A0,0,0,0,0,172,151" stroke="#ffffff" stroke-width="1" fill="#c49ae8"></path><text text-anchor="start" x="191.9730366148733" y="94.54011748449187" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#ffffff">7%</text></g><g><path d="M172,151L224.35164748498977,82.77020441473269A86,86,0,0,1,253.63084604717733,123.9370183900215L172,151A0,0,0,0,0,172,151" stroke="#ffffff" stroke-width="1" fill="#fec584"></path><text text-anchor="start" x="209.67797947568664" y="119.16176273685161" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#ffffff">9.5%</text></g><g><path d="M172,151L253.63084604717733,123.93701839002152A86,86,0,1,1,172,65L172,151A0,0,0,1,0,172,151" stroke="#ffffff" stroke-width="1" fill="#c4c4c4"></path><path d="M257.4276295842553,122.67827505932485A90,90,0,1,1,172,61" stroke="#c4c4c4" stroke-width="2" fill-opacity="1" fill="none"></path><text text-anchor="start" x="120.86108899279444" y="204.21175153052545" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#ffffff">80.1%</text></g><g></g></svg></div></div><div style="display: none; position: absolute; top: 310px; left: 460px; white-space: nowrap; font-family: Arial; font-size: 11px; font-weight: bold;">904208 (80.1%)</div><div></div></div>
+                    </td>
+                </tr>
+            </tbody></table>
     </div></section>
 
-    <section class="slide table"><div>
-                    
+    <!-- 11 -->
+    <section class="slide"><div>
+        <img src="pictures/banner.jpg" style="float:left; margin-right:20px;">
+        
+        <div style="position: absolute;">
+            <pre class="next">
+                <code><mark>&lt;div</mark> class="span3 banner"<mark>&gt;</mark></code>
+                <code>    <mark>&lt;script</mark> src="assets/js/<mark class="important">banner.js</mark>"<mark>&gt;&lt;/script&gt;</mark></code>
+                <code><mark>&lt;/div&gt;</mark></code>
+            </pre>
+
+            <pre class="next">
+                <code><mark>document</mark>.write('&lt;<mark>a</mark> href="..."&gt;&lt;<mark>img</mark> src=".../<mark class="important">banner.png</mark>"&gt;&lt;/<mark>a</mark>&gt;');</code>
+            </pre>
+
+            <pre class="next">
+                <code><mark>&lt;div</mark> class="span3 banner"<mark>&gt;</mark></code>
+                <code>    &lt;<mark>a</mark> href="..."&gt;&lt;<mark>img</mark> src=".../<mark class="important">banner.png</mark>"&gt;&lt;/<mark>a</mark>&gt;</code>
+                <code><mark>&lt;/div&gt;</mark></code>
+            </pre>
+        </div>
+    </div></section>
+
+    <section class="slide lotofcode "><div>
+        <style type="text/css">
+            .lotofcode > div {height: 640px; padding-top: 0;}
+        </style>
+        <div style="position: absolute;">
+            <pre>
+                <code>jQuery(<mark>document</mark>).ready(<mark>function</mark>(evt){</code>
+                <code>    jQuery(<mark class="string">"ul.nav.nav-list"</mark>)</code>
+                <code>          .find(<mark class="string">"#main"</mark>)</code>
+                <code>          .attr(<mark class="string">"class"</mark>,<mark class="string">"active"</mark>);</code>
+                <code>    <mark>var</mark> src = jQuery(<mark class="string">"ul.nav.nav-list"</mark>)</code>
+                <code>          .find(<mark class="string">"#main"</mark>)</code>
+                <code>          .find(<mark class="string">'img'</mark>)</code>
+                <code>          .attr(<mark class="string">'src'</mark>);</code>
+                <code>    jQuery(<mark class="string">"ul.nav.nav-list"</mark>)</code>
+                <code>          .find(<mark class="string">"#main"</mark>)</code>
+                <code>          .find(<mark class="string">'img'</mark>)</code>
+                <code>          .attr(<mark class="string">'src'</mark>, src.replace(<mark class="string">'.png'</mark>, <mark class="string">'-w.png'</mark>))</code>
+                <code>})</code>
+            </pre>
+        </div>
+    </div></section>
+
+    <section class="slide lotofcode "><div>
+        <style type="text/css">
+            .lotofcode > div {height: 640px; padding-top: 0;}
+        </style>
+        <div style="position: absolute;">
+            <pre>
+                <code>jQuery(<mark>document</mark>).ready(<mark>function</mark>(evt){</code>
+                <code>    jQuery(<mark class="string">"#main"</mark>)</code>
+                <code>          </code>
+                <code>          .addClass(<mark class="string">"active"</mark>);</code>
+                <code>    <mark>var</mark> src = jQuery(<mark class="string">"#main"</mark>)</code>
+                <code>          </code>
+                <code>          .find(<mark class="string">'img'</mark>)</code>
+                <code>          .attr(<mark class="string">'src'</mark>);</code>
+                <code>    jQuery(<mark class="string">"#main"</mark>)</code>
+                <code>          </code>
+                <code>          .find(<mark class="string">'img'</mark>)</code>
+                <code>          .attr(<mark class="string">'src'</mark>, src.replace(<mark class="string">'.png'</mark>, <mark class="string">'-w.png'</mark>))</code>
+                <code>})</code>
+            </pre>
+        </div>
+    </div></section>
+
+        <section class="slide lotofcode "><div>
+        <style type="text/css">
+            .lotofcode > div {height: 640px; padding-top: 0;}
+        </style>
+        <div style="position: absolute;">
+            <pre>
+                <code>jQuery(<mark>document</mark>).ready(<mark>function</mark>(evt){</code>
+                <code>    </code>
+                <code>          </code>
+                <code>          </code>
+                <code>    <mark>var</mark> img = jQuery(<mark class="string">"#main"</mark>)</code>
+                <code>          .addClass(<mark class="string">"active"</mark>)</code>
+                <code>          .find(<mark class="string">'img'</mark>);</code>
+                <code>          </code>
+                <code>    img.attr(<mark class="string">'src'</mark>, img.attr(<mark class="string">'src'</mark>).replace(<mark class="string">'.png'</mark>, <mark class="string">'-w.png'</mark>))</code>
+                <code>          </code>
+                <code>          </code>
+                <code>          </code>
+                <code>})</code>
+            </pre>
+        </div>
+        <div class="next" style="position: absolute;">
+            <pre>
+                <code>jQuery<mark class="deleted">(<mark>document</mark>).ready</mark>(<mark>function</mark>(<mark class="deleted">evt</mark>){</code>
+                <code>    </code>
+                <code>          </code>
+                <code>          </code>
+                <code>    <mark>var</mark> img = jQuery(<mark class="deleted">"#</mark>main<mark class="deleted">"</mark></mark>)</code>
+                <code>          .addClass(<mark class="string">"active"</mark>)</code>
+                <code>          .find(<mark class="string">'img'</mark>);</code>
+                <code>          </code>
+                <code>    img.attr(<mark class="string">'src'</mark>, img.attr(<mark class="string">'src'</mark>).replace(<mark class="string">'.png'</mark>, <mark class="string">'-w.png'</mark>))</code>
+                <code>          </code>
+                <code>          </code>
+                <code>          </code>
+                <code>})</code>
+            </pre>
+        </div>
+    </div></section>
+
+    <section class="slide"><div>
+        <pre>
+            <code>&lt;<mark>li</mark> id="<mark class="string">main</mark>" class="<mark class="string">active</mark>"&gt;</code>
+            <code>&lt;<mark>img</mark> src="<mark class="string">assets/img/ico-main-w.png</mark>"&gt;</code>
+        </pre>
+    </div></section>
+
+    <section class="slide"><div>
+    </div></section>
+
+    <section class="slide"><div>
+    </div></section>
+
+    <section class="slide"><div>
     </div></section>
 
 
