@@ -131,8 +131,13 @@
         </table>        
     </div></section>
 
+    <!-- Images -->
+    <section class="slide shout"><div>
+        <h2>Images</h2>
+    </div></section>
+
     <!-- 7 -->
-    <section class="slide table"><div>
+    <section class="slide"><div>
             <table align="center">
                 <tbody>
                 <tr>
@@ -179,7 +184,7 @@
         </table>
     </div></section>
 
-    <!-- 9 Optimization-2 -->
+    <!-- 9 Optimization-2 (Reduce Images Size) -->
     <section class="slide"><div>
         <h2><a href="http://bakayanton.github.io/yac2013-Optimized/optimization-2" target="_blank">Optimization-2</a> <i>(Reduce images size)</i></h2>
         
@@ -209,6 +214,11 @@
                     </td>
                 </tr>
             </tbody></table>
+    </div></section>
+
+    <!-- Scripts -->
+    <section class="slide shout"><div>
+        <h2>Scripts</h2>
     </div></section>
 
     <!-- 11 -->
@@ -327,6 +337,11 @@
         </pre>
     </div></section>
 
+    <!-- Requests (js) -->
+    <section class="slide shout"><div>
+        <h2>Requests (js)</h2>
+    </div></section>
+
     <!--  Optimization-3 -->
     <section class="slide"><div>
         <h2><a href="http://bakayanton.github.io/yac2013-Optimized/optimization-3" target="_blank">Optimization-3</a> <i>(Reduce js requests. Remove useless js)</i></h2>
@@ -346,7 +361,118 @@
         </table>
     </div></section>
 
+    <!-- Requests (images, css) -->
+    <section class="slide shout"><div>
+        <h2>Requests (images, css)</h2>
+    </div></section>
+
     <section class="slide"><div>
+        <pre>
+            <code><mark>body</mark> {</code>
+            <code>    background: url(data:image/svg+xml;base64,PD94bWw...);</code>
+            <code>}</code>
+        </pre>
+    </div></section>
+
+    <section class="slide"><div>
+        <style type="text/css">
+            .files img {display: block;}
+            .file-ico {display: inline-block; width:142px; padding:0; margin: 0 10px 15px 0; border-bottom:1px solid #52A2DF; list-style: none; vertical-align: top; text-indent: 0 !important; text-align: center;}
+            .file-ico:before {display: none !important;}
+        </style>
+        <ul class="files">
+            <li class="file-ico">
+                .svg
+                <img src="optimization-4/assets/img/g3012_png24_transparent.png">
+                14.1kb
+            </li>
+            <li class="file-ico next">
+                .png (tr)
+                <img src="optimization-4/assets/img/g3012_png24_transparent.png">
+                3.71kb
+            </li>
+            <li class="file-ico next">
+                .png (bg)
+                <img src="optimization-4/assets/img/g3012_png24_bg_notransparent.png">
+                3.10kb
+            </li>
+            <li class="file-ico next">
+                .jpg
+                <img src="optimization-4/assets/img/g3012_jpg_quality60.jpg">
+                2.24kb
+            </li>
+            <li class="file-ico next">
+                .png8 (128c)
+                <img src="optimization-4/assets/img/g3012_png8_Colors128.png">
+                1.70kb
+            </li>
+            <li class="file-ico next">
+                .png8 (64c)
+                <img src="optimization-4/assets/img/g3012_png8_Colors64.png">
+                1.47kb
+            </li>
+            <li class="file-ico next">
+                .png8 (32c)
+                <img src="optimization-4/assets/img/g3012_png8_Colors32.png">
+                1.29kb
+            </li>
+            <li class="file-ico next">
+                .png8 (16c)
+                <img src="optimization-4/assets/img/g3012_png8_Colors16.png">
+                1.15kb
+            </li>
+            <li class="file-ico next">
+                .png8 (8c)
+                <img src="optimization-4/assets/img/g3012_png8_Colors8.png">
+                1.03kb
+            </li>
+            <li class="file-ico next">
+                .png8 (4c)
+                <img src="optimization-4/assets/img/g3012_png8_Colors4.png">
+                0.8kb
+            </li>
+        </ul>
+    </div></section>
+
+    <!--  Optimization-4 -->
+    <section class="slide"><div>
+        <h2><a href="http://bakayanton.github.io/yac2013-Optimized/optimization-4" target="_blank">Optimization-4</a> <i>(Reduce images requests and css requests.)</i></h2>
+        
+        <table class="table-stats">
+            <tr>
+                <th>Start Render</th>   <th>Load Time</th>  <th>DOM Elements</th>   <th>Requests</th>   <th>Loaded Bytes</th>
+            </tr><tr>
+                <td>5.350s</td>         <td>22.971s</td>    <td>102</td>            <td>35</td>         <td>3,529 KB</td>
+            </tr><tr>
+                <td>2.468s</td>         <td>20.203s</td>    <td>102</td>            <td>35</td>         <td>3,529 KB</td>
+            </tr><tr>
+                <td>2.455s</td>         <td>8.214s</td>     <td>102</td>            <td>35</td>         <td>1.268 KB</td>
+            </tr><tr>
+                <td>2.270s</td>         <td>7.741s</td>     <td>88</td>             <td>21</td>         <td>1.263 KB</td>
+            </tr><tr class="highlighted">
+                <td>2.200s</td>         <td>7.723s</td>     <td>79</td>             <td>14</td>         <td>1.260 KB</td>
+            </tr>
+        </table>
+    </div></section>
+
+    <!-- Fonts -->
+    <section class="slide shout"><div>
+        <h2>5. Fonts</h2>
+    </div></section>
+
+    <section class="slide"><div>
+        <table>
+            <tr>
+                <th>Font</th>              <th>Size (KB)</th>  <th>Size Opt (KB)</th>
+            </tr>
+            <tr>
+                <td>PTN57F_W.woff</td>     <td>188</td>       <td>38</td>        </tr><tr>
+                <td>PTN77F_W.woff</td>     <td>243</td>       <td>38 ?</td>      </tr><tr>
+                <td>PTS55F_W.woff</td>     <td>219</td>       <td>38</td>        </tr><tr>
+                <td>PTS75F_W.woff</td>     <td>233</td>       <td>38</td>        </tr><tr>
+                <th>Total</th>             <th>883</th>       <th>152</th>       </tr>
+            </tr>
+        </table>
     </div></section>
 
     <section class="slide"><div>
