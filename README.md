@@ -9,4 +9,5 @@ yac2013-Optimized
 	<li><a href="http://bakayanton.github.io/yac2013-Optimized/optimization-3">Optimization-3</a> (Reduce js requests. Remove useless js)</li>
 	<li><a href="http://bakayanton.github.io/yac2013-Optimized/optimization-4">Optimization-4</a> (Reduce images and css requests. Background optimization)</li>
 	<li><a href="http://bakayanton.github.io/yac2013-Optimized/optimization-5">Optimization-5</a> (Fonts)</li>
+	<li><a href="http://bakayanton.github.io/yac2013-Optimized/optimization-6">Optimization-6</a> (Minify)</li>
 </ul>
